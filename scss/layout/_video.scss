@@ -1,0 +1,68 @@
+.video {
+    margin-top: 52px;
+    padding-left: 16px;
+    @include body-L-16;
+  
+    @media (min-width: $m1024) {
+      margin-top: 64px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  
+    &__title {
+      @media (min-width: $m1024){
+        margin-bottom: 32px;
+      }
+    }
+    &__title-text {
+      @include body-M-14;
+  
+      @media (min-width: $m1024) {
+  
+        @include body-L-16;
+      }
+    }
+    
+    &__grid {
+        overflow-x: auto;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: $m1024) {
+            border: 2px solid #F2F3F7;
+            box-sizing: border-box;
+            padding: 32px;
+        }
+    }
+  
+    &__item {
+      min-width: 100%;
+  
+      @media (min-width: $m1024) {
+        min-width: 752px;
+      }
+    }
+  
+    &__box {
+      display: block;
+      min-height: 216px;
+      max-width: 752px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 16px;
+
+      @media (min-width: $m1024) {
+        height: 426px;
+        max-width: 752px;
+        margin-right: 0px;
+      }
+      
+      &_1 {
+        background: #000000 url(../img/video.png) center center no-repeat;
+        background-size: contain;
+        border-radius: 8px;
+      }
+    }
+  
+  }

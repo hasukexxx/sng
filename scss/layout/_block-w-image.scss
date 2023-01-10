@@ -1,0 +1,127 @@
+.block-w-image {
+    margin-top: 52px;
+
+    @media screen and (min-width: $m1024) {
+        margin-top: 64px;
+    }
+
+    &__heading {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        margin-bottom: 16px;
+
+        @media screen and (min-width: $m1024) {
+            font-size: 32px;
+            line-height: 36px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 20px;
+
+        & li {
+            @include li;
+            padding-left: 16px;
+
+            @media (min-width: $m1024) {
+                padding-left: 24px;
+            }
+        }
+
+        & li:not(:last-child) {
+            margin-bottom:12px;
+           }
+
+        @media screen and (min-width: $m1024) {
+            font-size: 17px;
+            line-height: 24px;
+            max-width: 424px;
+        }
+
+        @media screen and (min-width: $m1280) {
+            max-width: 552px;
+        }
+
+        @media screen and (min-width: $m1360) {
+            max-width: 620px;
+        }
+    }
+
+    &__blocks {
+        margin-top: 52px;
+        display: grid;
+        row-gap: 32px;
+
+        @media screen and (min-width: $m1024) {
+            margin-top: 64px;
+            grid-template-columns: 1fr 40%;
+            grid-template-rows: 1fr;
+            row-gap: 0;
+            column-gap: 32px;
+            align-items: center;
+            // justify-items: center;
+        }
+
+        @media screen and (min-width: $m1280) {
+            column-gap: 48px;
+        }
+
+        @media screen and (min-width: $m1360) {
+            column-gap: 52px;
+        }
+    }
+
+    &__image {
+        justify-content: center;
+        display: flex;
+        grid-row: 1;
+
+        @media screen and (min-width: $m1024) {
+            justify-content: left;
+            grid-row: inherit;
+        }
+
+        img {
+            width: 100%;
+            max-width: 382px;
+
+            @media screen and (min-width: $m1024) {
+                max-width: 428px;
+            }
+        }
+
+        // @media screen and (min-width: $m1024) {
+        //     padding: 0 32px 0 0;
+        // }
+    }
+
+
+
+    &__content {
+        display: flex;
+    align-items: center;
+
+    @media (min-width: $m1024) {
+        justify-content: flex-end;
+    }
+    
+    &-wrap {
+
+        @media (min-width: $m1024) {
+            max-width: 455px;
+        }
+
+        @media (min-width: $m1280) {
+
+            max-width: 552px;
+        }
+
+        @media (min-width: $m1440) {
+            max-width: 600px;
+        }
+    }
+}
+}

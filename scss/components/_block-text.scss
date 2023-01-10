@@ -1,0 +1,50 @@
+.block-text {
+    margin-top: 52px;
+
+    &__text {
+        max-width: 100%;
+        font-family: 'MTS Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    &__text li {
+        @include li;
+        font-family: 'MTS Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (min-width: $m1024) {
+    .block-text {
+        margin-top: 64px;
+
+        &__text {
+            max-width: 662px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        &__text li {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 24px;
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        &__text li:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}

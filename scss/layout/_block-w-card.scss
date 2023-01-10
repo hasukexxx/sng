@@ -1,0 +1,138 @@
+.block-w-card {
+    margin-top: 52px;
+    
+    &__blocks {
+        display: grid;
+        row-gap: 32px;
+    }
+
+    &__image {
+        justify-content: center;
+        display:flex;
+
+        & img {
+            width: 100%;
+            max-width: 382px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__heading {
+        margin-bottom:24px;
+        font-family: 'MTS Sans';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    &__text {
+        font-family: 'MTS Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+
+        & li:not(:last-child) {
+             margin-bottom:8px;
+            }
+
+        & li:before {
+            content:"—";
+            padding-right: 8px;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 32px;
+
+            &-btn a {
+            color: #fff;
+            }
+
+            &-link {
+                margin: 24px 0 0 0;
+            }
+        }
+}
+
+@media (min-width: 1024px) {
+    .block-w-card {
+    &__blocks {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 0;
+        column-gap: 32px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding:32px;
+    }
+
+    &__heading {
+        margin-bottom:16px;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: -0.5px;
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 24px;
+
+        & li:not(:last-child) {
+             margin-bottom:12px;
+            }
+
+        & li:before {
+            content:"—";
+            padding-right: 8px;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 16px;
+
+            &-btn a {
+            color: #fff;
+            }
+
+            &-link {
+                margin: 0 0 0 24px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .block-w-card {
+        &__blocks {
+            column-gap: 48px;
+        }
+    }
+}
+
+@media (min-width: 1360px) {
+    .block-w-card {
+        &__blocks {
+            column-gap: 52px;
+        }
+
+        &__image {
+            & img {
+            max-width: 424px;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.pay-service {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 24px;
+
+    @media screen and (min-width: $m1024) {
+        margin-top: 32px;
+    }
+
+    &__qrcode {
+        display: none;
+
+        @media screen and (min-width: $m1024) {
+            width: 88px;
+            height: 88px;
+            margin-right: 16px;
+            display: flex;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: row;
+
+        @media screen and (min-width: $m1024) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+
+        a:focus {
+            background: transparent;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-left: 8px;
+        }
+
+        @media screen and (min-width: $m1024) {
+            &:last-child {
+                margin-left: 0px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+}

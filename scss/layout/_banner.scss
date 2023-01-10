@@ -1,0 +1,121 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  // media for background-image (1x / 2x) - START
+  @media (-webkit-min-device-pixel-ratio: 1) and (-webkit-max-device-pixel-ratio: 1.99),
+  (min-resolution: 1dppx) and (max-resolution:1.99dppx) {
+    background: url(../img/banner/perevody-bez-komissii-414@2x.jpg) center top no-repeat, linear-gradient(to top, #fff 0px, #F2F3F7 0px);
+    background-size: 414px auto, auto;
+
+    @media only screen and (min-width: $m414) {
+      background-size: contain;
+    }
+
+    @media only screen and (min-width: $m1024) {
+      background: url(../img/banner/perevody-bez-komissii-1024.jpg) center top no-repeat;
+    }
+
+    @media only screen and (min-width: $m1280) {
+      background: url(../img/banner/perevody-bez-komissii-1356.jpg) center top no-repeat;
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+    background: url(../img/banner/perevody-bez-komissii-414@2x.jpg) center top / cover no-repeat, linear-gradient(to top, #fff 0px, #F2F3F7 0px);
+    background-size: 414px auto, auto;
+  }
+
+  @media only screen and (min-width: $m414) {
+    background-size: contain;
+  }
+
+  @media only screen and (min-width: $m1024) {
+    background: url(../img/banner/perevody-bez-komissii-1024@2x.jpg) center top / cover no-repeat;
+  }
+
+  @media only screen and (min-width: $m1280) {
+    background: url(../img/banner/perevody-bez-komissii-1356@2x.jpg) center top / cover no-repeat;
+  }
+
+  // media for background-image (1x / 2x) - END
+
+  @media only screen and (min-width: $m1024) {
+    padding: 52px 32px 32px;
+    background-size: cover;
+    height: 454px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 48px;
+    margin-top: 180px;
+
+    @media only screen and (min-width: $m414) {
+      margin-top: 43.5vw;
+    }
+
+    @media only screen and (min-width: $m1024) {
+      margin-top: 0;
+      padding: 0;
+      max-width: 552px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    @media only screen and (min-width: $m1024) {
+      font-size: 40px;
+      line-height: 44px;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 22px;
+
+    @media (min-width: $m1024) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 24px;
+    }
+  }
+
+  &__btn-block {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 32px;
+    @include padding-LR;
+
+    @media only screen and (min-width: $m1024) {
+      flex-direction: row;
+      margin-top: auto;
+      padding: 0;
+      bottom: 0;
+    }
+  }
+
+  &__btn {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    line-height: 24px;
+    padding: 14px 32px;
+
+    @media only screen and (min-width: $m1024) {
+      width: auto;
+    }
+  }
+}
